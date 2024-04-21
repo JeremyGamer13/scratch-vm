@@ -794,6 +794,13 @@ const serialize = function (runtime, targetId, {allowOptimization = true} = {}) 
     // TW: Never include full user agent to slightly improve user privacy
     // if (typeof navigator !== 'undefined') meta.agent = navigator.userAgent;
 
+    // TW: Attach platform information (should be changed for forks of TurboWarp)
+    const platform = Object.create(null);
+    platform.name = "TurboWarp";
+    platform.url = "https://turbowarp.org/";
+    platform.version = "stable"; // Can be changed on staging?
+    meta.platform = platform;
+
     // Assemble payload and return
     obj.meta = meta;
 
