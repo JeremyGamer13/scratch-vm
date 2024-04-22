@@ -798,7 +798,6 @@ const serialize = function (runtime, targetId, {allowOptimization = true} = {}) 
     const platform = Object.create(null);
     platform.name = 'TurboWarp';
     platform.url = 'https://turbowarp.org/';
-    platform.version = 'stable'; // Can be changed on staging?
     meta.platform = platform;
 
     // Assemble payload and return
