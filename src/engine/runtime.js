@@ -919,6 +919,13 @@ class Runtime extends EventEmitter {
     }
 
     /**
+     * Event name when platform name inside a project does not match the runtime.
+     */
+    static get PLATFORM_MISMATCH () {
+        return 'PLATFORM_MISMATCH';
+    }
+
+    /**
      * How rapidly we try to step threads by default, in ms.
      */
     static get THREAD_STEP_INTERVAL () {
